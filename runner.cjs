@@ -20,6 +20,8 @@ WebAssembly.instantiate(
   }
 ).then(wasm_module => {
   // offset for LF char at the end
-  let result = wasm_module.instance.exports.solve(0, input_bytes.length - 1);
-  console.log(`Day ${day_num}: ${result}`);
+  let part1 = wasm_module.instance.exports.part1(0, input_bytes.length - 1);
+  let part2 = wasm_module.instance.exports.part2(0, input_bytes.length - 1);
+
+  console.log(`Day ${day_num}: ${part1}, ${part2}`);
 })

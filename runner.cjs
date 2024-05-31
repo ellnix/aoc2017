@@ -21,6 +21,12 @@ WebAssembly.instantiate(
         const data = buffer.slice(from, from + len);
 
         console.log(data);
+      },
+      print_memory_8: (from, len) => {
+        const buffer = new Uint8Array(memory.buffer);
+        const data = buffer.slice(from, from + len);
+
+        console.log(data);
       }
     }
   }

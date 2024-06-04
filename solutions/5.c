@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "parsers/int_list.h"
 
-int part1();
-int part2();
+int part1(void);
+int part2(void);
 
 int main() {
   int p1 = part1();
@@ -11,7 +11,7 @@ int main() {
 }
 
 int part1() {
-  int_array_t *input_nums = read_int_arr(5);
+  IntArray *input_nums = read_int_arr(5);
   int steps = 0;
 
   for (int pos = 0; pos >= 0 && pos < input_nums->len;
@@ -24,7 +24,7 @@ int part1() {
 }
 
 int part2() { 
-  int_array_t *input_nums = read_int_arr(5);
+  IntArray *input_nums = read_int_arr(5);
   int steps = 0;
 
   for (int pos = 0; pos >= 0 && pos < input_nums->len; steps++) {
